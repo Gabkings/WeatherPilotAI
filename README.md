@@ -193,7 +193,7 @@ src
 │   └── WeatherInsight.tsx
 │
 ├── pages
-│   └── Dashboard.tsx
+│   └── Home.tsx
 │
 ├── services
 │   ├── geocodingService.ts
@@ -204,8 +204,6 @@ src
 │
 ├── utils
 │   ├── insights.ts
-│   ├── scores.ts
-│   └── weatherConditions.ts
 │
 ├── App.tsx
 ├── main.tsx
