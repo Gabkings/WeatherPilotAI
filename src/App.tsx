@@ -1,8 +1,11 @@
+import Home from './pages/Home.tsx'
 
 function App() {
   return (
     <>
-      <div className="App">App component </div>
+      <div>
+        <Home />
+      </div>
     </>
   )
 }
