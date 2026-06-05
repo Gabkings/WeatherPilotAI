@@ -2,13 +2,9 @@
 
 WeatherPilot AI is a modern weather intelligence dashboard built with React, TypeScript, and the WeatherAI API. The application transforms raw weather data into actionable insights through intelligent scoring, visual analytics, and AI-powered weather summaries.
 
-## Live Demo
+## [Live Demo](https://resilient-sopapillas-e700c4.netlify.app/)
 
-[Add Deployment URL]
-
-## GitHub Repository
-
-[Add GitHub Repository URL]
+## [GitHub Repository](https://github.com/Gabkings/WeatherPilotAI)
 
 ---
 
@@ -193,7 +189,7 @@ src
 │   └── WeatherInsight.tsx
 │
 ├── pages
-│   └── Dashboard.tsx
+│   └── Home.tsx
 │
 ├── services
 │   ├── geocodingService.ts
@@ -204,8 +200,6 @@ src
 │
 ├── utils
 │   ├── insights.ts
-│   ├── scores.ts
-│   └── weatherConditions.ts
 │
 ├── App.tsx
 ├── main.tsx
@@ -366,6 +360,12 @@ VITE_WEATHER_AI_API_KEY=your_api_key_here
 
 ```bash
 npm run dev
+```
+
+### To Run tests
+
+```bash
+npm run test
 ```
 
 Application runs on:
