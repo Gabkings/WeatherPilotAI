@@ -2,23 +2,22 @@ import {
     render,
     screen,
 } from "@testing-library/react";
-import WeatherInsights from "../components/WeatherInsights.tsx";
+
+import Home from "../pages/Home";
 
 describe(
-    "WeatherInsight",
+    "Home Component",
     () => {
         test(
-            "renders insight",
+            "renders title",
             () => {
                 render(
-                    <WeatherInsights
-                        insight="Heavy rainfall expected"
-                    />
+                    <Home />
                 );
 
                 expect(
                     screen.getByText(
-                        "Heavy rainfall expected"
+                        /WeatherPilot AI/
                     )
                 ).toBeInTheDocument();
             }
