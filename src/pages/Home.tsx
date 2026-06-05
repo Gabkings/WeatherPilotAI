@@ -45,21 +45,50 @@ const Home = () => {
                 lang: "en",
             };
 
-            const [currentResponse, hourlyResponse, dailyResponse] =
-                await Promise.all([
+                const results = await Promise.allSettled([
                     getCurrentWeather(params),
                     getHourlyForecast(params),
                     getDailyForecast(params),
                 ]);
 
-            setCurrentWeather(currentResponse);
+            const currentResult = results[0];
+            const hourlyResult = results[1];
+            const dailyResult = results[2];
 
-            setHourlyForecast(hourlyResponse.hourly || []);
+            if (
+                currentResult.status === "fulfilled"
+            ) {
+                setCurrentWeather(currentResult.value);
+            }
 
-            setDailyForecast(dailyResponse.daily || []);
+            if (
+                hourlyResult.status === "fulfilled"
+            ) {
+                setHourlyForecast(
+                    hourlyResult.value.hourly || []
+                );
+            }
+
+            if (
+                dailyResult.status === "fulfilled"
+            ) {
+                setDailyForecast(
+                    dailyResult.value.daily || []
+                );
+            }
+
+            if (
+                results.some(
+                    (result) =>
+                        result.status === "rejected"
+                )
+            ) {
+                setError(
+                    "Some weather data could not be loaded."
+                );
+            }
 
             saveSearchHistory(location);
-
             setCity(location);
         } catch (err) {
             console.error(err);

@@ -1,0 +1,23 @@
+[build]
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/current"
+  to = "/.netlify/functions/current"
+  status = 200
+
+[[redirects]]
+  from = "/api/hourly"
+  to = "/.netlify/functions/hourly"
+  status = 200
+
+[[redirects]]
+  from = "/api/daily"
+  to = "/.netlify/functions/daily"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
