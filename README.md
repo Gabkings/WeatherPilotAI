@@ -2,13 +2,9 @@
 
 WeatherPilot AI is a modern weather intelligence dashboard built with React, TypeScript, and the WeatherAI API. The application transforms raw weather data into actionable insights through intelligent scoring, visual analytics, and AI-powered weather summaries.
 
-## Live Demo
+## [Live Demo](https://resilient-sopapillas-e700c4.netlify.app/)
 
-[Add Deployment URL]
-
-## GitHub Repository
-
-[Add GitHub Repository URL]
+## [GitHub Repository](https://github.com/Gabkings/WeatherPilotAI)
 
 ---
 
