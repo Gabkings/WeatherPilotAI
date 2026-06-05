@@ -32,8 +32,8 @@ const CurrentWeatherCard = ({current}: Props) => {
 
     return (
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+            <h1 className="text-center text-lg font-bold">Current Weather</h1>
             <div className="flex flex-col md:flex-row items-center justify-between">
-
                 {/* Left Section */}
 
                 <div>

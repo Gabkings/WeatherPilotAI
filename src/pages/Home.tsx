@@ -17,7 +17,6 @@ import {generateInsight} from "../utils/insights.ts";
 const Home = () => {
     const [city, setCity] = useState("Nairobi");
 
-    console.log("Current city:", city);
     const [currentWeather, setCurrentWeather] = useState<WeatherResponse | null>(null);
 
     const [hourlyForecast, setHourlyForecast] = useState<HourlyForecast[]>([]);
@@ -92,7 +91,7 @@ const Home = () => {
         }
 
         async function fetchWeather() {
-            await searchWeather("Nairobi");
+            await searchWeather(city);
         }
 
         fetchHIstory();
@@ -192,12 +191,15 @@ const Home = () => {
 
                         {/* Scores */}
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                            <TravelScoreCard score={scores.travelScore} />
+                        <div>
+                            <h1 className="text-center text-lg font-bold">Weather Forecasting for Traveling and Farming</h1>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                                <TravelScoreCard score={scores.travelScore} />
 
-                            <FarmingScoreCard score={scores.farmingScore} />
+                                <FarmingScoreCard score={scores.farmingScore} />
 
-                            <RiskScoreCard score={scores.riskScore} />
+                                <RiskScoreCard score={scores.riskScore} />
+                            </div>
                         </div>
 
                         {/* Insight */}
@@ -209,7 +211,7 @@ const Home = () => {
                         {/* Hourly Forecast Chart */}
 
                         <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-5 mb-6">
-                            <h2 className="text-xl font-semibold mb-4">
+                            <h2 className="text-center text-xl font-semibold mb-4">
                                 24-Hour Temperature Trend
                             </h2>
 
