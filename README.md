@@ -366,6 +366,12 @@ VITE_WEATHER_AI_API_KEY=your_api_key_here
 npm run dev
 ```
 
+### To Run tests
+
+```bash
+npm run test
+```
+
 Application runs on:
 
 ```text
