@@ -42,7 +42,7 @@ const CurrentWeatherCard = ({current}: Props) => {
                     </p>
 
                     <h1 className="text-6xl font-bold mt-2">
-                        {current.temperature} °C
+                        {current?.temperature} °C
                     </h1>
 
                     <p className="text-gray-500 mt-2">
